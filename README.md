@@ -89,10 +89,11 @@ by adding it to the `PYTEST_ADDOPTS` environment variable:
 $ PYTEST_ADDOPTS="--variables=/path/to/variables.json"
 ```
 
-Then you can run the tests using:
+Then you can run the tests using [Docker]:
 
-```sh
-$ tox
+```bash
+  $ docker build -t mozillians .
+  $ docker run -it mozillians
 ```
 
 ## Writing tests
@@ -105,6 +106,7 @@ things we'd like to ask you to do:
 3. Make sure all tests are passing, and submit a pull request.
 4. Always feel free to reach out to us and ask questions.
 
+[Docker]: https://www.docker.com
 [guide]: http://firefox-test-engineering.readthedocs.io/en/latest/guide/index.html
 [git clone]: https://help.github.com/articles/cloning-a-repository/
 [git fork]: https://help.github.com/articles/fork-a-repo/
