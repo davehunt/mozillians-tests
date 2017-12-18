@@ -38,10 +38,10 @@ pipeline {
       steps {
         writeCapabilities(capabilities, 'capabilities.json')
         sh "pytest --junit-xml=results/py27.xml " +
-        "--html=results/py27.html " +
-        "--self-contained-html " +
-        "--log-raw=results/py27_raw.txt " +
-        "--log-tbpl=results/py27_tbpl.txt"
+          "--html=results/py27.html " +
+          "--self-contained-html " +
+          "--log-raw=results/py27_raw.txt " +
+          "--log-tbpl=results/py27_tbpl.txt"
       }
       post {
         always {
