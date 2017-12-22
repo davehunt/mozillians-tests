@@ -10,7 +10,7 @@ RUN apt-get update \
     git \
     curl \
     firefox \
-    python2.7-dev
+    python2.7-dev \
  && rm -rf /var/lib/apt/lists/*
 RUN curl -fsSL https://bootstrap.pypa.io/get-pip.py | python2.7
 WORKDIR /src
