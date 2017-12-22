@@ -5,6 +5,6 @@ services:
   - docker
 before_install:
   - docker build -t mozillians-tests .
-  - docker run -it mozillians-tests tox
+  - docker run -it mozillians-tests
 script:
   - pytest
