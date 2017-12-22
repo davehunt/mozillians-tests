@@ -1,8 +1,10 @@
+sudo: required
 language: python
 python: 2.7
-install:
-  - pip install -r requirements.txt
+services:
+  - docker
+before_install:
+  - docker build -t mozillians-tests .
+  - docker run -it mozillians-tests tox
 script:
-  - flake8
-notifications:
-  email: fte-ci@mozilla.com
+  - pytest
