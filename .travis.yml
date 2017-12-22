@@ -7,4 +7,7 @@ before_install:
   - docker build -t mozillians-tests .
   - docker run -it mozillians-tests
 script:
+  - flake8
   - pytest {posargs}
+notifications:
+  email: fte-ci@mozilla.com
