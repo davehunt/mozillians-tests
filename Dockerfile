@@ -33,4 +33,4 @@ RUN curl -fsSLo /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/r
   && chmod 755 /opt/geckodriver-$GECKODRIVER_VERSION \
 && ln -fs /opt/geckodriver-$GECKODRIVER_VERSION /usr/bin/geckodriver
 COPY . /src
-CMD pytest
+# CMD pytest
