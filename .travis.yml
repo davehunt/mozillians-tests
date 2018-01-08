@@ -7,6 +7,6 @@ before_install:
   - docker build -t mozillians-tests .
   - docker run -it mozillians-tests
 script:
-  - flake8
+  - flake8 .
 notifications:
   email: fte-ci@mozilla.com
