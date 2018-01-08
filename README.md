@@ -92,8 +92,8 @@ $ PYTEST_ADDOPTS="--variables=/path/to/variables.json"
 Then you can run the tests using [Docker]:
 
 ```bash
-  $ docker build -t mozillians .
-  $ docker run -it mozillians
+  $ docker build -t mozillians-tests .
+  $ docker run -it mozillians-tests
 ```
 
 ## Writing tests
