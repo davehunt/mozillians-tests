@@ -6,7 +6,7 @@ services:
 install:
   - docker build -t mozillians-tests .
 script:
+  - docker run -it mozillians-tests flake8 --ignore=E501
   - docker run -it mozillians-tests
-  - flake8 .
 notifications:
   email: fte-ci@mozilla.com
