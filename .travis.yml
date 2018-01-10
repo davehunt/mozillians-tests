@@ -1,12 +1,8 @@
-sudo: required
 language: python
 python: 2.7
-services:
-  - docker
 install:
-  - docker build -t mozillians-tests .
+  - pip install -r requirements.txt
 script:
-  - docker run -it mozillians-tests flake8 --ignore=E501
-  - docker run -it mozillians-tests
+  - flake8
 notifications:
   email: fte-ci@mozilla.com
