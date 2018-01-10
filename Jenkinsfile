@@ -21,6 +21,7 @@ pipeline {
     VARIABLES = credentials('MOZILLIANS_VARIABLES')
     PYTEST_PROCESSES = "${PYTEST_PROCESSES ?: "auto"}"
     PYTEST_ADDOPTS =
+      "-n=${PYTEST_PROCESSES} " +
       "--tb=short " +
       "--color=yes " +
       "--driver=SauceLabs " +
