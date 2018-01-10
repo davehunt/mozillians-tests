@@ -19,6 +19,7 @@ pipeline {
   }
   environment {
     VARIABLES = credentials('MOZILLIANS_VARIABLES')
+    PYTEST_PROCESSES = "${PYTEST_PROCESSES ?: "auto"}"
     PYTEST_ADDOPTS =
       "--tb=short " +
       "--color=yes " +
