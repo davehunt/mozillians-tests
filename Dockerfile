@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM python:2-alpine3.7
 
 ENV MOZ_HEADLESS=1
 
@@ -7,14 +7,8 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
 RUN apk --no-cache add \
     curl \
     firefox@testing \
-    gcc \
-    git \
-    libffi-dev \
-    musl-dev \
-    openssl-dev \
-    python2-dev
+    git
 
-RUN curl -fsSL https://bootstrap.pypa.io/get-pip.py | python2.7
 WORKDIR /src
 COPY requirements.txt /src
 RUN pip install -r requirements.txt
@@ -30,3 +24,5 @@ RUN curl -fsSLo /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/r
 
 ADD . /src
 WORKDIR /src
+
+CMD pytest
