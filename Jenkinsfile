@@ -30,6 +30,9 @@ pipeline {
   }
   stages {
     stage('Lint') {
+      agent {
+        dockerfile true
+      }
       steps {
         sh "flake8"
       }
