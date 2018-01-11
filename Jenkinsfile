@@ -6,9 +6,7 @@ def capabilities = [
 ]
 
 pipeline {
-  agent {
-    dockerfile true
-  }
+  agent any
   libraries {
     lib('fxtest@1.9')
   }
@@ -37,6 +35,9 @@ pipeline {
       }
     }
     stage('Test') {
+      agent {
+        dockerfile true
+      }
       steps {
         writeCapabilities(capabilities, 'capabilities.json')
         sh "pytest --junit-xml=results/py27.xml " +
