@@ -63,7 +63,7 @@ as many vouched users as you intend to have tests running in parallel.
           "username": "vouched",
           "email": "vouched@example.com",
           "name": "Vouched User"
-        },
+        }
       ],
       "unvouched": {
         "username": "unvouched",
