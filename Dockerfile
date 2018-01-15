@@ -6,8 +6,7 @@ RUN mkdir /opt
 RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 RUN apk --no-cache add \
     curl \
-    firefox@testing \
-    git
+    firefox@testing
 
 WORKDIR /src
 COPY requirements.txt /src
