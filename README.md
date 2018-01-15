@@ -86,7 +86,7 @@ Then you can run the tests using [Docker]:
   $ docker build -t mozillians-tests .
   $ docker run -it \
     --mount type=bind,source=/path/to/variables.json,destination=/variables.json,readonly \
-    mozillians-tests pytest --variables=/path/to/variables.json
+    mozillians-tests
 ```
 
 ### Run the tests using Sauce Labs
@@ -108,7 +108,7 @@ $ docker build -t mozillians-tests .
 $ docker run -it \
   --mount type=bind,source=$HOME/.saucelabs,destination=/src/.saucelabs,readonly \
   --mount type=bind,source=/path/to/variables.json,destination=/variables.json,readonly \
-  mozillians-tests pytest --variables=/path/to/variables.json
+  mozillians-tests
 ```
 
 ## Writing tests
